@@ -73,7 +73,7 @@ const Register = () => {
     }
     // e.preventDefault();
     axios
-      .post("https://kopyrightit-backend-zdfw.onrender.comsignup", { name, email, password })
+      .post("https://kopyrightit-backend-zdfw.onrender.com/signup", { name, email, password })
       .then((result) => {
         setModalShow(true);
       })

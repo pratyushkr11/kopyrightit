@@ -45,7 +45,7 @@ const Login = ({ setUserId }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    axios.post('https://kopyrightit-backend-zdfw.onrender.comlogin', { email, password })
+    axios.post('https://kopyrightit-backend-zdfw.onrender.com/login', { email, password })
       .then(result => {
         if (result.data) {
           const userId = result.data;

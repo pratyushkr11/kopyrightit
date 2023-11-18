@@ -48,7 +48,7 @@ const PasswordReset = () => {
     // }
 
     const sendPasswordResetEmail = () => {
-        axios.post('https://kopyrightit-backend-zdfw.onrender.comapi/send-reset-email', { email })
+        axios.post('https://kopyrightit-backend-zdfw.onrender.com/api/send-reset-email', { email })
             .then(result => {
                 window.alert("Password reset Email Sent")
                 navigate("/")
