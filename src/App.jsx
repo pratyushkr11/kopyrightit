@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import Login from './Login'
-// import Homepage from './Homepage'
 import ForgotPassword from './component/OtherPages/ForgotPassword'
 import Home from './component/Homepage/Home'
 import Login from './component/Login/Login'
