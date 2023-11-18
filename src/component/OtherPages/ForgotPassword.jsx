@@ -25,7 +25,7 @@ const ForgotPassword = () => {
     const email1 = email; // No need to convert
     const token1 = token; // No need to convert
 
-    axios.post('http://localhost:3001/api/verify-reset-url', { token: token1 })
+    axios.post('https://kopyrightit-backend-zdfw.onrender.comapi/verify-reset-url', { token: token1 })
       .then(result => {
         if (result.data.message === 'Reset URL is valid') {
           // The URL is valid
@@ -56,7 +56,7 @@ const ForgotPassword = () => {
     } else {
       // Send a request to change the password
       try {
-        const url = 'http://localhost:3001/api/change-password';
+        const url = 'https://kopyrightit-backend-zdfw.onrender.comapi/change-password';
         const response = await axios.post(url, { email, newPassword });
         if (response.status === 200) {
           setMessage('Your password has been reset successfully');

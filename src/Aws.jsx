@@ -18,7 +18,7 @@ const S3Uploader = () => {
 
     try {
       // Step 1: Get the pre-signed URL from the server
-      const urlResponse = await axios.get('http://localhost:3001/getUploadUrl'); // Update with your server's endpoint
+      const urlResponse = await axios.get('https://kopyrightit-backend-zdfw.onrender.comgetUploadUrl'); // Update with your server's endpoint
       const { url } = urlResponse.data;
 
       setUploadUrl(url);

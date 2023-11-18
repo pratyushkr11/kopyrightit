@@ -19,7 +19,7 @@ const GoogleLogin = () => {
     const password = userUid
     const email = userEmail
     const name = userName
-    axios.post('http://localhost:3001/google-login', { name, email, password, })
+    axios.post('https://kopyrightit-backend-zdfw.onrender.comgoogle-login', { name, email, password, })
       .then(result => {
         if (result.data) {
           const userId = result.data;

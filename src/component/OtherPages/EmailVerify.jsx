@@ -18,7 +18,7 @@ const EmailVerify = () => {
   useEffect(() => {
     const name = "hello"; // Make sure this matches your backend expectation
     console.log(email)
-    axios.post('http://localhost:3001/api/verify', { email, token, name })
+    axios.post('https://kopyrightit-backend-zdfw.onrender.comapi/verify', { email, token, name })
       .then(result => {
         if (result.data.message === 'Reset URL is valid') {
           setValidUrl(true);
