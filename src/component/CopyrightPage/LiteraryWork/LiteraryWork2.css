@@ -1,0 +1,75 @@
+.main__container {
+  background: #0575e6;
+  background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+  background: linear-gradient(to bottom, #0575e6, #021b79);
+}
+
+.main__container h2 {
+  padding: 30px 0;
+}
+
+.form-container2 {
+  width: 90%;
+  height: 700px;
+  margin: auto;
+  background: white;
+
+  box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.radio-btn {
+  padding: 20px 0 50px 150px;
+  width: 80%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-btn div {
+  display: flex;
+}
+
+.radio-btn input {
+  margin-left: 30px;
+}
+
+.radio-btn label {
+  font-weight: 500;
+  font-size: 25px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.conditional-conatiner div {
+  margin-left: 100px;
+  padding: 20px 0;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.conditional-conatiner label {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.conditional-conatiner input {
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+  border-width: 1px;
+  padding-left: 15px;
+}
+
+.btn-lg {
+  background: #021b3e;
+  color: white;
+  width: 350px;
+}
+
+.btn-lg:hover {
+  background: #71afff;
+  color: black;
+}

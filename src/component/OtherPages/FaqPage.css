@@ -1,0 +1,19 @@
+.nav-container {
+  margin-bottom: 50px;
+}
+
+.main-conatiner {
+  background: #0575e6;
+  background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+  background: linear-gradient(to bottom, #0575e6, #021b79);
+}
+
+.faq-container {
+  width: 90%;
+  height: 800px;
+  margin: auto;
+  background: white;
+  padding: 50px 80px;
+  box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}

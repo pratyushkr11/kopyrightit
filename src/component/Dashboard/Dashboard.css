@@ -1,0 +1,26 @@
+.card__heading {
+  color: #021b3e;
+}
+
+.card2__heading {
+  color: "#ffffff";
+}
+
+.card2__subheading {
+  color: "#ffffff";
+}
+
+.app__card {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__table {
+  padding: 50px 40px 40px;
+}

@@ -1,0 +1,66 @@
+.main___container {
+  background: #0575e6;
+  background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+  background: linear-gradient(to bottom, #0575e6, #021b79);
+}
+
+.form-container3 {
+  width: 90%;
+  margin: auto;
+  background: white;
+
+  box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.questions {
+  margin: auto;
+  width: 85%;
+}
+
+.questions label {
+  font-weight: 500;
+  font-size: 22px;
+  width: 500px;
+}
+
+.question__container input {
+  width: 400px;
+  border-radius: 10px;
+  border-width: 1px;
+  padding-left: 15px;
+}
+
+.yes__container input,
+.no__container input {
+  width: 400px;
+  border-radius: 10px;
+  border-width: 1px;
+  padding-left: 15px;
+}
+.question__container div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.app__question {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+
+.app__option {
+  margin-left: 650px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.yes__container div,
+.no__container div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}

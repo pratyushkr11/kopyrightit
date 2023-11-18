@@ -1,0 +1,193 @@
+.app__container {
+  background: #0575e6;
+  background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+  background: linear-gradient(to bottom, #0575e6, #021b79);
+}
+
+
+.signin-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.app-container {
+  background: white;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  padding-bottom: 40px;
+  margin-top: 20px;
+  box-shadow: 6px -6px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.app_box {
+  width: 40%;
+  margin-top: 20px;
+}
+
+.logo-img {
+  width: 150px;
+}
+
+.header-txt {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  color: #000000;
+}
+
+.header2-txt {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 35px;
+  padding-top: 8px;
+  color: #021b3e;
+}
+
+.form-input {
+  width: 68%;
+  border: 1px solid #000000;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.showpass {
+  position: absolute;
+  right: 0;
+  top: 1px;
+  padding: 6px 10px;
+  margin-right: 0.5px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2a4365;
+  background-color: lightskyblue;
+  border-radius: 0 10px 10px;
+  cursor: pointer;
+}
+
+.app_img {
+  margin: 30px 0 0 50px;
+  align-items: center;
+  width: 32%;
+  position: absolute;
+}
+
+.btn-toRegister {
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  background: #021b3e;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-toRegister:hover {
+  background: #20a3af;
+  color: black;
+}
+
+.header-menu {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot {
+  font-size: 17px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.btn-lg {
+  background: #021b3e;
+  color: white;
+  width: 200px;
+}
+
+.signin-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-lg:hover {
+  background: #71afff;
+  color: black;
+}
+
+.register {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.form__fields1 {
+  padding-left: 50px;
+  width: 80%;
+}
+
+.form__fields1 label {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.fields1 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.page-txt {
+  position: relative;
+  top: 400px;
+  padding: 0 50px 10px 50px;
+  color: white;
+  text-align: center;
+}
+
+.app-txt {
+  position: relative;
+  top: 400px;
+  padding: 0 50px 10px 50px;
+  color: white;
+  text-align: center;
+}
+
+hr {
+  width: 35%;
+}
+
+.or {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.lines {
+  padding-top: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-btn {
+  padding-top: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}

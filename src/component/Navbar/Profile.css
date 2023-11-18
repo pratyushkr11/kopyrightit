@@ -1,0 +1,61 @@
+/* Add this CSS to your stylesheet or CSS module */
+
+.profile {
+  position: relative;
+}
+
+.profile-icon {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.dropdown-item {
+  padding: 10px;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+/* Add this CSS to your stylesheet or CSS module */
+
+.login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.login-button:hover {
+  background-color: #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

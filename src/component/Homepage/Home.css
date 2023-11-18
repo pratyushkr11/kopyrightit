@@ -1,0 +1,101 @@
+.app__home {
+  background: #0575e6;
+  background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+  background: linear-gradient(to bottom, #0575e6, #021b79);
+  overflow: hidden;
+}
+
+.hero__section {
+  width: 60%;
+  padding-bottom: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-txt {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 65px;
+  padding-top: 40px;
+  font-family: Inter;
+}
+
+.head-img {
+  width: 380px;
+  padding-top: 20px;
+}
+
+.btn-home {
+  background: #302b63;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  color: white;
+  width: 200px;
+  height: 55px;
+  font-weight: 600;
+  font-size: 28px;
+  transition: ease-in 0.3s;
+  border-width: 0;
+  cursor: pointer;
+}
+
+.btn-home:hover {
+  color: black;
+  background: white;
+}
+
+.head__container {
+  text-align: center;
+  background: white;
+  box-shadow: 0px -15px 4px rgba(0, 0, 0, 0.25);
+}
+
+.head__container div {
+  margin: auto;
+  padding-bottom: 30px;
+  margin: 0 30px;
+}
+
+.section__heading {
+  padding: 10px 0 20px 0;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 64px;
+}
+
+.card {
+  width: 210px;
+  background: #1c7cd1;
+  border-width: 0;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+  width: 120px;
+  padding: 10px 0;
+}
+
+.card-title {
+  padding-bottom: 10px;
+}
+
+.card__section {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  margin: auto;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.btn-card {
+  background: #022d69;
+  color: white;
+}
+
+.btn-card:hover {
+  color: #022d69;
+  background: white;
+}

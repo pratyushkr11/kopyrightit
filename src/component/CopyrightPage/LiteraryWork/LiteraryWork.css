@@ -1,0 +1,103 @@
+.main__container {
+  background: #0575e6;
+  background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+  background: linear-gradient(to bottom, #0575e6, #021b79);
+}
+
+.hero-section {
+  padding: 0 20px 30px 250px;
+  color: white;
+}
+
+.hero-section p {
+  width: 500px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.hero-section img {
+  position: absolute;
+  right: 220px;
+  top: 70px;
+  width: 250px;
+}
+
+.form-container {
+  width: 90%;
+  margin: auto;
+  background: white;
+  padding-bottom: 10px;
+  box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+.form-head {
+  padding: 5px 0;
+}
+
+.form-head h2 {
+  padding-top: 25px;
+}
+
+.form-fields input {
+  width: 500px;
+  border-radius: 10px;
+  border-width: 1px;
+  padding-left: 20px;
+}
+
+.form-fields {
+  width: 85%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0px;
+}
+
+.form-fields label {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.form-fields {
+  padding-left: 200px;
+}
+
+.drop__fields {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.drop__fields input {
+  width: 200px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.drop_container {
+  margin-left: 200px;
+}
+
+.drop_container input {
+  width: 200px;
+}
+
+.drop_container label {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.drop_container Select {
+  width: 400px;
+}
+
+.action-btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  margin: auto;
+  width: 90%;
+}

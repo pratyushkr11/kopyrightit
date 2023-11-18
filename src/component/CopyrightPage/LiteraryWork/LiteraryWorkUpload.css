@@ -1,0 +1,46 @@
+.main__container {
+  background: #0575e6;
+  background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+  background: linear-gradient(to bottom, #0575e6, #021b79);
+}
+
+.upload__container {
+  width: 90%;
+  margin: auto;
+  background: white;
+
+  box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.upload__container h2 {
+  text-align: center;
+}
+
+.upload {
+  display: flex;
+  justify-content: space-around;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.upload p {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.doc-upload,
+.sign-upload {
+  background: #a5b7ff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+  width: 480px;
+}
+
+.cta-btn {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin: 20px 0;
+}

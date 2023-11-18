@@ -1,0 +1,189 @@
+.app__container {
+  padding-bottom: 80px;
+  background: #0575e6;
+  background: -webkit-linear-gradient(to left, #0575e6, #021b79);
+  background: linear-gradient(to left, #0575e6, #021b79);
+}
+
+.app__box {
+  width: 1150px;
+  margin: auto;
+  padding: 30px 0 70px 0;
+  background: white;
+  box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.app-img {
+  width: 150px;
+  padding-left: 30px;
+}
+
+.btn-signin {
+  font-weight: 500;
+  font-size: 20px;
+  background: #021b3e;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-signin:hover {
+  background: #20a3af;
+  color: black;
+}
+
+.header-menu {
+  width: 95%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.header2 {
+  font-weight: 600;
+  font-size: 36px;
+  text-align: center;
+  padding-bottom: 35px;
+
+  color: #021b3e;
+}
+
+.app__fields {
+  width: 95%;
+  padding: 20px 150px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.app__fields label {
+  padding: 5px 0px 15px 0px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.form__input {
+  width: 65%;
+  height: 2.5rem;
+  border: 1px solid #000000;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.form-check {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.box {
+  padding-left: 10px;
+}
+
+.btn-register {
+  width: 400px;
+  background: #021b3e;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.register-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.signin {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.instructions {
+  width: 25%;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: absolute;
+  right: -120px;
+  top: 4px;
+}
+
+#confirmnote {
+  width: 20%;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: absolute;
+  right: -80px;
+  bottom: 10px;
+}
+
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  position: absolute;
+  right: 190px;
+  top: 28px;
+}
+
+.invalid {
+  color: red;
+  position: absolute;
+  right: 190px;
+  top: 28px;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  display: inline-block;
+}
+
+.bar {
+  position: absolute;
+  top: 120px;
+}

@@ -1,0 +1,105 @@
+.form-modal {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 0 0 20px;
+}
+
+.btn-closeModal,
+.btn-save {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.modal__form input,
+.modal__form3 input {
+  width: 500px;
+  height: 40px;
+  border-radius: 10px;
+  border-width: 1px;
+  padding-left: 20px;
+}
+
+.modal__form,
+.modal__form3 {
+  width: 85%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0px;
+}
+
+.modal__form label,
+.modal__form3 label {
+  font-size: 18px;
+}
+
+.modal__form,
+.modal__form3 {
+  padding-left: 120px;
+}
+
+.modal__fields {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.modal__fields input {
+  height: 40px;
+  width: 280px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.modal_container {
+  margin-left: 120px;
+}
+
+.modal_container input {
+  width: 200px;
+}
+
+.modal_container label {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.modal-radio-btn {
+  padding: 10px 0 0 120px;
+  width: 80%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-radio-btn div {
+  display: flex;
+}
+
+.modal-radio-btn input {
+  margin-left: 30px;
+}
+
+.modal-radio-btn label {
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-condition label {
+  font-weight: 500;
+  font-size: 18px;
+  padding-left: 120px;
+}
+
+.modal-yes__container,
+.modal-no__container {
+  font-weight: 500;
+  font-size: 18px;
+  padding-left: 80px;
+  width: 85%;
+}

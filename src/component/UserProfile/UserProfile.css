@@ -1,0 +1,38 @@
+.profile-container {
+  background: #0575e6;
+  background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+  background: linear-gradient(to bottom, #0575e6, #021b79);
+  overflow: hidden;
+}
+
+.profile-box {
+  margin-top: 80px !important;
+  background: white;
+  width: 80%;
+  margin: auto;
+  box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding-bottom: 80px !important;
+}
+
+.profile-box h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.profilePic {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 50%;
+}
+.profileContainer {
+  display: flex;
+  margin: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .profileContainer {
+    flex-direction: column-reverse;
+  }
+}

@@ -1,0 +1,17 @@
+.form-label {
+  padding-top: 12px;
+  font-weight: 550;
+  font-size: 20px;
+  text-align: left;
+}
+
+.form-field {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-btn {
+  margin-bottom: 20px;
+  align-items: center;
+}
