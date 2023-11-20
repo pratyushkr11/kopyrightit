@@ -131,7 +131,7 @@ const LiteraryWorkUpload = (props) => {
                             <div className="mb-3 text-center">
                                 <label htmlFor="formFileLg" className="form-label">Upload Your Image</label>
                                 <p>Drag & drop files or Browse</p>
-                                <input type="file" className="form-control" id="inputGroupFile02" onChange={handleImageChange} />
+                                <input type="file" className="form-control" id="inputGroupFile02" accept=".jpg, .jpeg, .png" onChange={handleImageChange} />
                                 <p style={{ paddingTop: '5px' }}>Supported formats: JPEG, PNG</p>
                                 {imageSuccessMessage && <p>{imageSuccessMessage}</p>}
                                 {imageErrorMessage && <p>{imageErrorMessage}</p>}
