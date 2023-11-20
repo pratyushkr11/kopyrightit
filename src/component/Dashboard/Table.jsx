@@ -61,7 +61,7 @@ export default function CustomizedTables() {
   useEffect(() => {
     try {
       axios
-        .get(`http://localhost:3001/getformsu?userId=${userId}`)
+        .get(`https://kopyrightit-backend-zdfw.onrender.com/getformsu?userId=${userId}`)
         .then((response) => {
           setForms(response.data);
           selectedFormRef.current = response.data[0];
@@ -80,57 +80,57 @@ export default function CustomizedTables() {
 
   return (
     <>
-    {isModalOpen && (
-      <FormModal
-        isOpen={isModalOpen}
-        setIsOpen={closeModal}
-        contentLabel={"Preview"}
-        forms={selectedFormRef.current}
-      />
-    )}
-    <TableContainer component={Paper}>
-      {loading ? (
-        // Display loading indicator while data is being fetched
-        <CircularProgress />
-      ) : (
-        <Table sx={{ minWidth: 700 }} aria-label="customized table">
-          <TableHead>
-            <TableRow>
-              <StyledTableCell>Name of application</StyledTableCell>
-              <StyledTableCell align="center">Date of application</StyledTableCell>
-              <StyledTableCell align="center">Current status</StyledTableCell>
-              <StyledTableCell></StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {forms.map((formData, index) => (
-              <StyledTableRow key={index}>
-                <StyledTableCell component="th" scope="row">
-                  {formData.formType.toUpperCase()} COPYRIGHT
-                </StyledTableCell>
-                <StyledTableCell align="center">{new Date(formData.date).toLocaleDateString()}</StyledTableCell>
-                <StyledTableCell align="center">In Progress</StyledTableCell>
-
-                <StyledTableCell
-                        className="tableCell"
-                        align="center"
-                        // onClick={() => handleModal(formData)} // Pass the form data to handleModal
-                        sx={{ cursor: "pointer" }}
-                      >
-                          <Link
-                to={`/formpage/${index}`} // Change the pathname format
-                state={{ formData }} // Pass formData directly as state
-              >
-                <u>View Details</u>
-              </Link>
-                      </StyledTableCell>
-
-              </StyledTableRow>
-            ))}
-          </TableBody>
-        </Table>
+      {isModalOpen && (
+        <FormModal
+          isOpen={isModalOpen}
+          setIsOpen={closeModal}
+          contentLabel={"Preview"}
+          forms={selectedFormRef.current}
+        />
       )}
-    </TableContainer>
+      <TableContainer component={Paper}>
+        {loading ? (
+          // Display loading indicator while data is being fetched
+          <CircularProgress />
+        ) : (
+          <Table sx={{ minWidth: 700 }} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Name of application</StyledTableCell>
+                <StyledTableCell align="center">Date of application</StyledTableCell>
+                <StyledTableCell align="center">Current status</StyledTableCell>
+                <StyledTableCell></StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {forms.map((formData, index) => (
+                <StyledTableRow key={index}>
+                  <StyledTableCell component="th" scope="row">
+                    {formData.formType.toUpperCase()} COPYRIGHT
+                  </StyledTableCell>
+                  <StyledTableCell align="center">{new Date(formData.date).toLocaleDateString()}</StyledTableCell>
+                  <StyledTableCell align="center">In Progress</StyledTableCell>
+
+                  <StyledTableCell
+                    className="tableCell"
+                    align="center"
+                    // onClick={() => handleModal(formData)} // Pass the form data to handleModal
+                    sx={{ cursor: "pointer" }}
+                  >
+                    <Link
+                      to={`/formpage/${index}`} // Change the pathname format
+                      state={{ formData }} // Pass formData directly as state
+                    >
+                      <u>View Details</u>
+                    </Link>
+                  </StyledTableCell>
+
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        )}
+      </TableContainer>
     </>
   );
 }

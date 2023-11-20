@@ -35,7 +35,7 @@ export default function ClippedDrawer() {
 
   const fetchUserDataFromBackend = (userId) => {
 
-    axios.get(`http://localhost:3001/api/user/${userId}`)
+    axios.get(`https://kopyrightit-backend-zdfw.onrender.com/api/user/${userId}`)
       .then((response) => {
         setUserData({
           name: response.data.name,

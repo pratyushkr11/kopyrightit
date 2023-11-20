@@ -38,7 +38,7 @@ const PasswordModel = (props) => {
     } else {
       // Send a request to change the password
       try {
-        const response = await axios.post('http://localhost:3001/api/change-password', {
+        const response = await axios.post('https://kopyrightit-backend-zdfw.onrender.com/api/change-password', {
           email: props.modaldata.email,
           newPassword,
         });
@@ -57,7 +57,7 @@ const PasswordModel = (props) => {
         }
       } catch (error) {
         // console.error(error);
-        
+
         // Handle any API errors
         toast.error('Password reset failed', {
           position: 'top-center',
