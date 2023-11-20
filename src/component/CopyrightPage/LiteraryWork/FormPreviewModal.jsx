@@ -16,7 +16,7 @@ const FormPreviewModal = (props) => {
     const setLiteraryWorkData = async (data) => {
 
         axios
-            .post("https://kopyrightit-backend-zdfw.onrender.com/form", data)
+            .post("http://localhost:3001/form", data)
             .then((result) => {
                 //   console.log(result);
                 navigate("/dashboard");

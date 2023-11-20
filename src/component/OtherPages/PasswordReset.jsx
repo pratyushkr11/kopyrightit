@@ -1,68 +1,43 @@
-import { useState } from 'react'
-// import { ToastContainer, toast } from 'react-toastify';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-// import 'react-toastify/dist/ReactToastify.css';
 import logo from '../../assets/logo2.png';
-// import axios from '../../api/axios'
-import './PasswordReset.css'
+import './PasswordReset.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import PasswordModel from './PasswordModel';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { BeatLoader } from 'react-spinners';
 
 const PasswordReset = () => {
     const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [modaldata, setModalData] = useState({});
+    const [modalShow, setModalShow] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const errRef = useRef();
 
-    const [email, setEmail] = useState("");
+    const handleSubmit = () => {
+        setLoading(true); // Set loading to true while waiting for the API response
 
-    const [message, setMessage] = useState("");
+        const generatedOTP = Math.floor(100000 + Math.random() * 900000);
 
-    // const setVal = (e) => {
-    //     setEmail(e.target.value)
-    // }
-
-    // // const sendLink = async (e) => {
-    // //     e.preventDefault();
-
-    // //     if (email === "") {
-    // //         toast.error("email is required!", {
-    // //             position: "top-center"
-    // //         });
-    // //     } else if (!email.includes("@")) {
-    // //         toast.warning("includes @ in your email!", {
-    // //             position: "top-center"
-    // //         });
-    // //     } else {
-    // //         const response = await axios.post("/forget-password",
-    // //             { email }
-    // //         );
-
-    // //         if (response.status === 200) {
-    // //             setEmail("");
-    // //             setMessage(true)
-    // //         } else {
-    // //             toast.error("This Email ID does not exist", {
-    // //                 position: "top-center"
-    // //             })
-    // //         }
-    //     }
-    // }
-
-    const sendPasswordResetEmail = () => {
-        axios.post('https://kopyrightit-backend-zdfw.onrender.com/api/send-reset-email', { email })
-            .then(result => {
-                window.alert("Password reset Email Sent")
-                navigate("/")
-                if (result.data) {
-                } else {
-                    console.log('failed');
-                }
+        axios
+            .post('http://localhost:3001/pass-reset/sendotp', { email, generatedOTP })
+            .then((result) => {
+                setLoading(false); // Set loading to false after receiving the response
+                setModalShow(true);
+                setModalData({ email, generatedOTP });
             })
-            .catch(err => {
+            .catch((err) => {
+                setLoading(false); // Set loading to false if there's an error
                 if (!err?.response) {
-                    console.log('No Server Response');
-                }
-                else {
-                    console.log('Login Failed');
+                    toast.error('No Server Response');
+                } 
+                else if (err.response?.status === 500) {
+                    toast.error('User Not Found');
+                } else {
+                    toast.error('User Not Found');
                 }
                 errRef.current.focus();
             });
@@ -71,31 +46,40 @@ const PasswordReset = () => {
     return (
         <>
             <section>
+                <ToastContainer />
                 <div className='header-menu'>
-                    <img className="logo-img" src={logo} alt="app-logo" />
-                    <Link to="/">
-                        <button type="button" className="btn btn-toRegister">Login</button>
+                    <img className='logo-img' src={logo} alt='app-logo' />
+                    <Link to='/'>
+                        <button type='button' className='btn btn-toRegister'>
+                            Login
+                        </button>
                     </Link>
                 </div>
-                <div className="form_data">
-                    <div className="form_heading">
+                <div className='form_data'>
+                    <div className='form_heading'>
                         <h1>Enter Your Email</h1>
                     </div>
-
-                    {/* {message ? <p style={{ color: "green", fontWeight: "bold" }}>Pasword reset link send successfully in your email</p> : ""} */}
-                    <form className='form'>
-                        <div className="form_input">
-                            <label htmlFor="email">Email</label>
-                            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} name="email" id="email" placeholder='Enter Your Email Address' />
+                    <div className='form'>
+                        <div className='form_input'>
+                            <label htmlFor='email'>Email</label>
+                            <input
+                                type='email'
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                name='email'
+                                id='email'
+                                placeholder='Enter Your Email Address'
+                            />
                         </div>
-
-                        <button className='btn btn-send' onClick={sendPasswordResetEmail} >Send</button>
-                    </form>
-                    {/* <ToastContainer /> */}
+                        <button className='btn btn-send' onClick={handleSubmit}>
+                            {loading ? <BeatLoader size={8} color='#fff' /> : 'Send'}
+                        </button>
+                    </div>
+                    <PasswordModel show={modalShow} onHide={() => setModalShow(false)} modaldata={modaldata} />
                 </div>
             </section>
         </>
-    )
-}
+    );
+};
 
-export default PasswordReset
+export default PasswordReset;

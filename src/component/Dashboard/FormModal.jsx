@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import Button from '@mui/material/Button';
-import { useNavigate } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 import './FormModal.css'
 
@@ -23,30 +23,34 @@ const FormModal = (props) => {
                     <u>Form Details</u>
                 </h2>
                 <div className="admin-form-modal">
-                    <div className="admin_modal__form">
-                        <label htmlFor="option">
-                            <b>Dairy No: </b>
-                        </label>
-                        <input
-                            placeholder="Your Dairy No"
-                            type="text"
-                            id="dairy-no"
-                            value={forms.dairyNo}
-                            disabled
-                        />
-                    </div>
-                    <div className="admin_modal__form">
-                        <label htmlFor="status">
-                            <b>Status: </b>
-                        </label>
-                        <input
-                            placeholder="Your Dairy No"
-                            type="text"
-                            id="status"
-                            value={forms.status}
-                            disabled
-                        />
-                    </div>
+                <div className="admin_modal__form">
+        <label htmlFor="option">
+          <b>Dairy No: </b>
+        </label>
+        <input
+          placeholder="Enter Dairy No"
+          type="text"
+          id="dairy-no"
+          value={forms.dairyNo}
+          disabled
+        />
+      </div>
+      <div className="admin_modal__form">
+      <label htmlFor="status">
+          <b>Status: </b>
+        </label>
+        <select
+          id="status"
+          value={forms.status}
+          disabled
+        >
+            <option value="">Select Status</option>
+          <option value="Pending">Pending</option>
+          <option value="Application Submitted">Application Submitted</option>
+          <option value="Approved">Approved</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </div>
                     <div className='admin_modal__form'>
                         <label htmlFor='option'><b>What type of copyright are you registering? </b></label>
                         <input

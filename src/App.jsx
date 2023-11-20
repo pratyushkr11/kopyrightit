@@ -1,5 +1,8 @@
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import Signup from './Signup'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ForgotPassword from './component/OtherPages/ForgotPassword'
+// import Login from './Login'
+// import Homepage from './Homepage'
 import Home from './component/Homepage/Home'
 import Login from './component/Login/Login'
 import Register from './component/Register/Register'
@@ -33,7 +36,6 @@ function App() {
         <Route path='/settings' element={<Settings />}></Route>
         <Route path='/form/:selectedValue' element={<LiteraryForm />}></Route>
         <Route path='/verify-email' element={<EmailVerify />}></Route>
-        <Route path='/forgotpassword' element={<ForgotPassword />}></Route>
         <Route path='/user-profile' element={<Profile />}></Route>
         <Route path='/formpage/:index' element={<FormModalPage />}></Route>
       </Routes>

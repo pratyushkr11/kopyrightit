@@ -12,6 +12,7 @@ import PasswordStrengthBar from "react-password-strength-bar";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import GoogleLogin from "../Login/GoogleLogin";
+import { BeatLoader } from 'react-spinners';
 
 import "./Register.css";
 
@@ -26,6 +27,8 @@ const Register = () => {
 
   const userRef = useRef();
   const errRef = useRef();
+  const [loading, setLoading] = useState(false);
+  const [modaldata, setModalData] = useState({});
 
   const [name, setName] = useState("");
   const [email, setMail] = useState("");
@@ -42,7 +45,12 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showMatchPassword, setShowMatchPassword] = useState(false);
   const [modalShow, setModalShow] = useState(false);
+  // const [checkboxChecked, setCheckboxChecked] = useState(true);
+
+
   const [checkboxChecked, setCheckboxChecked] = useState(true);
+
+
 
   const [errMsg, setErrMsg] = useState("");
   useEffect(() => {
@@ -72,19 +80,26 @@ const Register = () => {
       return;
     }
     // e.preventDefault();
+    setLoading(true);
+
+    const generatedOTP = Math.floor(100000 + Math.random() * 900000); // Generate OTP
     axios
-      .post("https://kopyrightit-backend-zdfw.onrender.com/signup", { name, email, password })
+      .post("http://localhost:3001/sendotp", { email, generatedOTP })
       .then((result) => {
+        setLoading(false);
         setModalShow(true);
+        setModalData({ email, name, password, generatedOTP });
+        // navigate("/");
       })
       .catch(err => {
+        setLoading(false);
         if (!err?.response) {
           setErrMsg('No Server Response');
         } else if (err.response?.status === 400) {
           setErrMsg('Missing Username or Password');
         } else if (err.response?.status === 500) {
           setErrMsg('Email Already Present');
-          setModalShow(false);
+
         } else {
           setErrMsg('Login Failed');
         }
@@ -269,13 +284,18 @@ const Register = () => {
             <RegisterModal
               show={modalShow}
               onHide={() => setModalShow(false)}
+              modaldata={modaldata}
             />
             <div className="register-btn">
               <button
                 className="btn btn-primary btn-lg btn-register"
                 disabled={!validMail || !validPwd || !validMatch || checkboxChecked}
               >
-                Register
+                {loading ? (
+                  <BeatLoader size={8} color='#fff' />
+                ) : (
+                  'Register'
+                )}
               </button>
             </div>
           </form>

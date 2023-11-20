@@ -63,17 +63,17 @@ const LiteraryWork = (props) => {
   const getOptionsForPath = (work) => {
     switch (work) {
       case 'Copyright of Literary Work':
-        return ['Select an Option', 'Article', 'Story / Novel (Fiction)', 'Story / Novel (Non-Fiction)', 'Research Paper', 'Poetry', 'Lyrics', 'Script', 'Other Literary Work'];
+        return ['Select an Option', 'Literary Option 1', 'Literary Option 2', 'Literary Option 3'];
       case 'Copyright of Musical Work':
-        return ['Select an Option', 'Staff Notation', 'Chord Chart', 'Sargam', 'Other Musical Work'];
+        return ['Select an Option', 'Musical Option 1', 'Musical Option 2', 'Musical Option 3'];
       case 'Copyright of Artistic Work':
-        return ['Select an Option', 'Paintings', 'Cover Art', 'Photo Collage', 'Poster', 'Photographs', 'Infographic Material', 'Other Artistic Work'];
+        return ['Select an Option', 'Artistic Option 1', 'Artistic Option 2', 'Artistic Option 3'];
       case 'Copyright of Videography Work':
-        return ['Select an Option', 'Music Video', 'Feature Film', 'Web Series', 'Reels', 'Short Videos', 'Advertisements', 'Other Videography work'];
+        return ['Select an Option', 'Videography Option 1', 'Videography Option 2', 'Videography Option 3'];
       case 'Copyright of Sound Recording':
-        return ['Select an Option', 'Song', 'Instrumental Track', 'Conversation / Dialogue', 'Audiobooks', 'Voice', 'Other Sound Recording'];
+        return ['Select an Option', 'Sound Recording Option 1', 'Sound Recording Option 2', 'Sound Recording Option 3'];
       case 'Copyright of Computer Program':
-        return ['Select an Option', 'Source Code', 'Software UI/UX', 'Software Manual'];
+        return ['Select an Option', 'Computer Program Option 1', 'Computer Program Option 2', 'Computer Program Option 3'];
       default:
         return ['Select an Option'];
     }
@@ -113,9 +113,9 @@ const LiteraryWork = (props) => {
     "Uttarakhand",
     "West Bengal",
   ];
+  
 
-
-
+  
 
   return (
     <>
@@ -225,22 +225,22 @@ const LiteraryWork = (props) => {
                   ></input>
                 </div>
                 <label htmlFor='state'><b>State: </b></label>
-                <div style={{ width: '300px' }}>
-                  <select
-                    style={{ height: '40px', width: '280px' }}
-                    id='state'
-                    required
-                    value={data.form1.state}
-                    onChange={handleChange}
-                  >
-                    <option value="" disabled>Select a state</option>
-                    {stateList.map((state) => (
-                      <option key={state} value={state}>
-                        {state}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+      <div style={{ width: '300px' }}>
+        <select
+          style={{ height: '40px', width: '280px' }}
+          id='state'
+          required
+          value={data.form1.state}
+          onChange={handleChange}
+        >
+          <option value="" disabled>Select a state</option>
+          {stateList.map((state) => (
+            <option key={state} value={state}>
+              {state}
+            </option>
+          ))}
+        </select>
+      </div>
               </div>
               <div className="drop__fields">
                 <label htmlFor='city'><b>City: </b></label>
