@@ -123,7 +123,7 @@ const LiteraryWorkUpload = (props) => {
                                 <p style={{ paddingTop: '5px' }}>Supported formats: All</p>
                                 {docSuccessMessage && <p>{docSuccessMessage}</p>}
                                 {docErrorMessage && <p>{docErrorMessage}</p>}
-                                <button className='btn btn-doc btn-primary' onClick={handleFileUpload} style={{ zIndex: '0' }}>Upload PDF</button>
+                                <button className='btn btn-doc btn-primary' onClick={handleFileUpload} style={{ zIndex: '0' }}>Upload File</button>
                             </div>
                         </div>
 
