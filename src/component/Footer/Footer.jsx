@@ -1,11 +1,12 @@
 import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom'
 import './Footer.css';
 
 const Footer = () => {
     return (
         <div>
             <div className="foot-container">
-                <div className="row" style={{ width: '1200px' }}>
+                <div className="row" style={{ width: '1250px' }}>
                     <div className="col-md-4">
                         <img className="footer__logo" src={logo} alt="logo-img" />
                         <div className="socials">
@@ -15,11 +16,12 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <h2 className="link-head">Links</h2>
+                        <h2 className="link-head" style={{ width: '120px' }}>Links</h2>
                         <ul>
-                            <li><a className="footer-link" href="/">Home</a></li>
-                            <li><a className="footer-link" href="/about-us">About Us</a></li>
-                            <li><a className="footer-link" href="/contact">Contact Us</a></li>
+                            <li><Link to='/homepage' className="footer-link">Home</Link></li>
+                            <li><Link to='/faq' className="footer-link">FAQ</Link></li>
+                            <li><Link to='/about-us' className="footer-link">About Us</Link></li>
+                            <li><Link to='/contact' className="footer-link">Contact Us</Link></li>
                         </ul>
                     </div>
                     <div className="col-md-4">

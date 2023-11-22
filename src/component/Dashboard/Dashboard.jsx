@@ -114,23 +114,23 @@ const Dashboard = () => {
         <Box
           sx={{
             textAlign: 'center',
-            margin: '100px 30px 0 0',
+            margin: '100px 60px 0 0',
             width: 580,
             height: 450,
             borderRadius: '20px',
             boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.25)',
-            backgroundColor: '#021B3E',
+            backgroundColor: '#C2D9FF',
           }}
         >
           <Typography className='card2__title' pt={2} sx={{
             fontWeight: 700,
             fontSize: '32px',
-            color: '#ffffff'
+            color: '#000'
           }}><u>Activity</u></Typography>
           <Typography className='card2__subheading' pt={2} sx={{
             fontWeight: 500,
             fontSize: '25px',
-            color: '#ffffff'
+            color: '#000'
           }}>Total Applications Applied</Typography>
 
           <Chart data={chartData} />

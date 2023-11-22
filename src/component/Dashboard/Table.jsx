@@ -121,7 +121,7 @@ export default function CustomizedTables() {
                       to={`/formpage/${index}`} // Change the pathname format
                       state={{ formData }} // Pass formData directly as state
                     >
-                      <u>View Details</u>
+                      <u style={{ color: 'blue' }}>View Details</u>
                     </Link>
                   </StyledTableCell>
 

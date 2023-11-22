@@ -129,7 +129,7 @@ const LiteraryWorkUpload = (props) => {
 
                         <div className='sign-upload'>
                             <div className="mb-3 text-center">
-                                <label htmlFor="formFileLg" className="form-label">Upload Your Image</label>
+                                <label htmlFor="formFileLg" className="form-label">Upload Your Signature</label>
                                 <p>Drag & drop files or Browse</p>
                                 <input type="file" className="form-control" id="inputGroupFile02" accept=".jpg, .jpeg, .png" onChange={handleImageChange} />
                                 <p style={{ paddingTop: '5px' }}>Supported formats: JPEG, PNG</p>
@@ -139,10 +139,10 @@ const LiteraryWorkUpload = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className='action-btn' style={{ padding: '0' }}>
-                        <button className='btn text-center' style={{ color: 'blue', fontSize: '25px', fontWeight: '400' }} onClick={handleBack}><ArrowLeftIcon style={{ fontSize: '40' }} />Back</button>
+                    <div className='action-btn-upload' style={{ padding: '0' }}>
+                        <button className='btn btn-back' style={{ color: 'blue', fontSize: '25px', fontWeight: '400' }} onClick={handleBack}><ArrowLeftIcon style={{ fontSize: '40' }} />Back</button>
                         <button className='btn btn-lg cta-btn' onClick={handleSave}>Confirm and Save Details</button>
-                        <button className='btn text-center' style={{ color: 'blue', fontSize: '25px', fontWeight: '400' }}>Next<ArrowRightIcon style={{ fontSize: '40' }} /></button>
+
                     </div>
                 </div>
                 <Footer />

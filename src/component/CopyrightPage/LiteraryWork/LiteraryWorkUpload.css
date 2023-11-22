@@ -39,8 +39,10 @@
 }
 
 .cta-btn {
-  display: flex;
-  justify-content: center;
-  margin: auto;
   margin: 20px 0;
+  margin-left: 350px;
+}
+
+.btn-back {
+  padding-left: 50px;
 }

@@ -63,17 +63,17 @@ const LiteraryWork = (props) => {
   const getOptionsForPath = (work) => {
     switch (work) {
       case 'Copyright of Literary Work':
-        return ['Select an Option', 'Literary Option 1', 'Literary Option 2', 'Literary Option 3'];
+        return ['Select an Option', 'Article', 'Story / Novel (Fiction)', 'Story / Novel (Non-Fiction)', 'Research Paper', 'Poetry', 'Lyrics', 'Script', 'Other Literary Work'];
       case 'Copyright of Musical Work':
-        return ['Select an Option', 'Musical Option 1', 'Musical Option 2', 'Musical Option 3'];
+        return ['Select an Option', 'Staff Notation', 'Chord Chart', 'Sargam', 'Other Musical Work'];
       case 'Copyright of Artistic Work':
-        return ['Select an Option', 'Artistic Option 1', 'Artistic Option 2', 'Artistic Option 3'];
+        return ['Select an Option', 'Paintings', 'Cover Art', 'Poster', 'Photographs', 'Photo Collage', 'Infographic Material', 'Other Artistic Work'];
       case 'Copyright of Videography Work':
-        return ['Select an Option', 'Videography Option 1', 'Videography Option 2', 'Videography Option 3'];
+        return ['Select an Option', 'Music Video', 'Feature Film', 'Web Series', 'Reels', 'Short Videos', 'Advertisements', 'Other Videography work'];
       case 'Copyright of Sound Recording':
-        return ['Select an Option', 'Sound Recording Option 1', 'Sound Recording Option 2', 'Sound Recording Option 3'];
+        return ['Select an Option', 'Song', 'Instrumental Track', 'Conversation / Dialogue', 'Audiobooks', 'Voice', 'Other Sound Recording'];
       case 'Copyright of Computer Program':
-        return ['Select an Option', 'Computer Program Option 1', 'Computer Program Option 2', 'Computer Program Option 3'];
+        return ['Select an Option', 'Source Code', 'Software UI/UX', 'Software Manual'];
       default:
         return ['Select an Option'];
     }
@@ -113,9 +113,9 @@ const LiteraryWork = (props) => {
     "Uttarakhand",
     "West Bengal",
   ];
-  
 
-  
+
+
 
   return (
     <>
@@ -137,9 +137,9 @@ const LiteraryWork = (props) => {
               <Dropdown id='option' options={options} onChange={handleChange} value={selectedOption} placeholder="Select an option" />
             </div>
             <div className='form-fields'>
-              <label htmlFor='name'><b>Applicant's Middle Name: </b></label>
+              <label htmlFor='name'><b>Applicant's First Name: </b></label>
               <input
-                placeholder="Enter Your Full Name"
+                placeholder="Enter Your First Name"
                 type="text"
                 id='name'
                 autoComplete="off"
@@ -151,7 +151,7 @@ const LiteraryWork = (props) => {
             <div className='form-fields'>
               <label htmlFor='name'><b>Applicant's Middle Name: </b></label>
               <input
-                placeholder="Enter Your Full Name"
+                placeholder="Enter Your Middle Name"
                 type="text"
                 id='name1'
                 autoComplete="off"
@@ -160,9 +160,9 @@ const LiteraryWork = (props) => {
               ></input>
             </div>
             <div className='form-fields'>
-              <label htmlFor='name'><b>Applicant's LastName: </b></label>
+              <label htmlFor='name'><b>Applicant's Last Name: </b></label>
               <input
-                placeholder="Enter Your Full Name"
+                placeholder="Enter Your Last Name"
                 type="text"
                 id='name2'
                 autoComplete="off"
@@ -225,22 +225,22 @@ const LiteraryWork = (props) => {
                   ></input>
                 </div>
                 <label htmlFor='state'><b>State: </b></label>
-      <div style={{ width: '300px' }}>
-        <select
-          style={{ height: '40px', width: '280px' }}
-          id='state'
-          required
-          value={data.form1.state}
-          onChange={handleChange}
-        >
-          <option value="" disabled>Select a state</option>
-          {stateList.map((state) => (
-            <option key={state} value={state}>
-              {state}
-            </option>
-          ))}
-        </select>
-      </div>
+                <div style={{ width: '300px' }}>
+                  <select
+                    style={{ height: '40px', width: '280px' }}
+                    id='state'
+                    required
+                    value={data.form1.state}
+                    onChange={handleChange}
+                  >
+                    <option value="" disabled>Select a state</option>
+                    {stateList.map((state) => (
+                      <option key={state} value={state}>
+                        {state}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
               <div className="drop__fields">
                 <label htmlFor='city'><b>City: </b></label>
@@ -269,7 +269,7 @@ const LiteraryWork = (props) => {
               </div>
             </div>
             <div className='action-btn'>
-              <Link to='/' style={{ color: 'blue', fontSize: '25px', fontWeight: '400' }}>
+              <Link to='/homepage' style={{ color: 'blue', fontSize: '25px', fontWeight: '400' }}>
                 <ArrowLeftIcon style={{ fontSize: '40' }} />
                 Back</Link>
               <button className='btn' style={{ color: 'blue', fontSize: '25px', fontWeight: '400' }} onClick={handleNext}>
