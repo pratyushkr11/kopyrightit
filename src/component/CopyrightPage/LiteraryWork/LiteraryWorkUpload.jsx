@@ -120,7 +120,7 @@ const LiteraryWorkUpload = (props) => {
                                 <label htmlFor="formFileLg" className="form-label">Upload Your Work</label>
                                 <p>Drag & drop files or Browse</p>
                                 <input type="file" className="upload-file form-control" id="inputGroupFile02" onChange={handleFileChange} />
-                                <p style={{ paddingTop: '5px' }}>Supported formats: PDF</p>
+                                <p style={{ paddingTop: '5px' }}>Supported formats: All</p>
                                 {docSuccessMessage && <p>{docSuccessMessage}</p>}
                                 {docErrorMessage && <p>{docErrorMessage}</p>}
                                 <button className='btn btn-doc btn-primary' onClick={handleFileUpload} style={{ zIndex: '0' }}>Upload PDF</button>
@@ -135,7 +135,7 @@ const LiteraryWorkUpload = (props) => {
                                 <p style={{ paddingTop: '5px' }}>Supported formats: JPEG, PNG</p>
                                 {imageSuccessMessage && <p>{imageSuccessMessage}</p>}
                                 {imageErrorMessage && <p>{imageErrorMessage}</p>}
-                                <button className='btn btn-sign btn-primary' style={{ zIndex: '0' }} onClick={handleImageUpload}>Upload Image</button>
+                                <button className='btn btn-sign btn-primary' style={{ zIndex: '0' }} onClick={handleImageUpload}>Upload Signature</button>
                             </div>
                         </div>
                     </div>
