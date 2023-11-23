@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Footer from '../../Footer/Footer';
 import Navbar from '../../Navbar/Navbar';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
@@ -126,8 +126,21 @@ const LiteraryWork3 = (props) => {
                                     </div>
                                 </div>
                                 <div>
-                                    {data.form3.isAuthorAlive === "yes" ? (
-                                        <div className='yes__container'>
+                                    {data.form3.isAuthorAlive === "no" ? (
+                                        <div className='no__container'>
+                                            <div>
+                                                <label htmlFor='particularsDateOfDecease'>Date of his Decease</label>
+                                                <input
+                                                    style={{ paddingRight: '10px' }}
+                                                    placeholder='Enter Date (DD/MM/YYYY)'
+                                                    type="date"
+                                                    id='particularsDateOfDecease'
+                                                    autoComplete="off"
+                                                    required
+                                                    value={data.form3.particularsDateOfDecease}
+                                                    onChange={handleChange}
+                                                />
+                                            </div>
                                             <div>
                                                 <label htmlFor='particularsNameOfAuthor'>Name of the author</label>
                                                 <input
@@ -167,20 +180,8 @@ const LiteraryWork3 = (props) => {
                                         </div>
                                     ) : (
                                         <div>
-                                            <div className='no__container'>
-                                                <div>
-                                                    <label htmlFor='particularsDateOfDecease'>Date of his Decease</label>
-                                                    <input
-                                                        style={{ paddingRight: '10px' }}
-                                                        placeholder='Enter Date (DD/MM/YYYY)'
-                                                        type="date"
-                                                        id='particularsDateOfDecease'
-                                                        autoComplete="off"
-                                                        required
-                                                        value={data.form3.particularsDateOfDecease}
-                                                        onChange={handleChange}
-                                                    />
-                                                </div>
+                                            <div className='yes__container'>
+
                                                 <div>
                                                     <label htmlFor='particularsNameOfAuthor'>Name of the author</label>
                                                     <input
