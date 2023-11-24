@@ -151,13 +151,6 @@ const Dashboard = () => {
               fontWeight: 700,
               fontSize: '32px',
             }}>Application Details</Typography>
-            <Button variant="contained" size="medium"
-              sx={{
-                background: '#021B3E',
-                margin: '15px 20px 0 15px'
-              }}>
-              View All Applications
-            </Button>
           </div>
           <div className='card__table'>
             <Table />
