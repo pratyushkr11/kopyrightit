@@ -34,7 +34,7 @@ const LiteraryWorkUpload = (props) => {
 
     const handleFileUpload = async () => {
         try {
-            const urlResponse = await axios.get("https://kopyrightit-backend-zdfw.onrender.com/getUploadUrl");
+            const urlResponse = await axios.get("http://localhost:3001/getUploadUrl");
             const { url, key } = urlResponse.data;
 
             if (selectedFile) {
@@ -60,7 +60,7 @@ const LiteraryWorkUpload = (props) => {
 
     const handleImageUpload = async () => {
         try {
-            const urlResponse = await axios.get("https://kopyrightit-backend-zdfw.onrender.com/getUploadUrl");
+            const urlResponse = await axios.get("http://localhost:3001/getUploadUrl");
             const { url, key } = urlResponse.data;
 
             if (image) {
