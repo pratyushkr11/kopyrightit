@@ -24,7 +24,7 @@ const RegisterModal = (props) => {
     const email = props.modaldata.email.toString();
     const password = props.modaldata.password.toString();
     axios
-      .post("http://localhost:3001/signup", { name, email, password, isVerified: true })
+      .post("https://kopyrightit-backend-zdfw.onrender.com/signup", { name, email, password, isVerified: true })
       .then((result) => {
         toast.success('OTP Verified. Please click SignIn');
         props.onHide();

@@ -23,7 +23,7 @@ const PasswordReset = () => {
         const generatedOTP = Math.floor(100000 + Math.random() * 900000);
 
         axios
-            .post('http://localhost:3001/pass-reset/sendotp', { email, generatedOTP })
+            .post('https://kopyrightit-backend-zdfw.onrender.com/pass-reset/sendotp', { email, generatedOTP })
             .then((result) => {
                 setLoading(false); // Set loading to false after receiving the response
                 setModalShow(true);

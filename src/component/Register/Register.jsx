@@ -84,7 +84,7 @@ const Register = () => {
 
     const generatedOTP = Math.floor(100000 + Math.random() * 900000); // Generate OTP
     axios
-      .post("http://localhost:3001/sendotp", { email, generatedOTP })
+      .post("https://kopyrightit-backend-zdfw.onrender.com/sendotp", { email, generatedOTP })
       .then((result) => {
         setLoading(false);
         setModalShow(true);

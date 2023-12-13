@@ -33,7 +33,7 @@ const Settings = () => {
       navigate('/');
     } else {
       // Fetch the user's email from the server using userId
-      axios.get(`http://localhost:3001/api/user/email/${userId}`)
+      axios.get(`https://kopyrightit-backend-zdfw.onrender.com/api/user/email/${userId}`)
         .then((response) => {
           setFormData({ ...formData, email: response.data.email });
         })
@@ -47,7 +47,7 @@ const Settings = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:3001/api/settings', formData);
+      await axios.post('https://kopyrightit-backend-zdfw.onrender.com/api/settings', formData);
       window.alert('Details Saved');
       navigate('/dashboard');
     } catch (error) {
