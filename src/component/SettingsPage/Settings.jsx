@@ -72,7 +72,7 @@ const Settings = () => {
         <Box
           component="form"
           sx={{
-            '& .MuiTextField-root': { m: 1, width: '35ch' },
+            '& .MuiTextField-root': { m: 1, width: '28ch' },
             paddingTop: '30px'
           }}
           onSubmit={handleSubmit}

@@ -99,3 +99,9 @@
   color: #022d69;
   background: white;
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .hero__section img {
+    width: 42%;
+  }
+}

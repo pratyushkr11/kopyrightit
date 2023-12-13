@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Footer from '../../Footer/Footer';
 import Navbar from '../../Navbar/Navbar';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
@@ -92,7 +92,7 @@ const LiteraryWork3 = (props) => {
                                     />
                                 </div>
                                 <div>
-                                    <label style={{ paddingTop: '12px' }} htmlFor='particularsLanguageOfWork'>Language of the work</label>
+                                    <label htmlFor='particularsLanguageOfWork'>Language of the work</label>
                                     <input
                                         placeholder='Enter language of work'
                                         type="language"
@@ -106,24 +106,23 @@ const LiteraryWork3 = (props) => {
                             </div>
                             <div>
                                 <div className='app__question'>
-                                    <label htmlFor='text' style={{ paddingTop: '10px' }}>Is the author alive?</label>
-                                    <div className='app__option'>
-                                        <input
-                                            id='isAuthorAlive'
-                                            checked={data.form3.isAuthorAlive === "yes"}
-                                            value="yes"
-                                            type="radio"
-                                            onChange={handleChange}
-                                        />Yes
-                                        <input
-                                            id='isAuthorAlive'
-                                            checked={data.form3.isAuthorAlive === "no"}
-                                            value="no"
-                                            type="radio"
-                                            onChange={handleChange}
-                                        />{" "}
-                                        No
-                                    </div>
+                                    <label htmlFor='text'>Is the author alive?</label>
+                                    <input
+                                        id='isAuthorAlive'
+                                        checked={data.form3.isAuthorAlive === "yes"}
+                                        value="yes"
+                                        type="radio"
+                                        onChange={handleChange}
+                                    /> Yes
+                                    <input
+                                        id='isAuthorAlive'
+                                        checked={data.form3.isAuthorAlive === "no"}
+                                        value="no"
+                                        type="radio"
+                                        onChange={handleChange}
+                                    />{" "}
+                                    No
+
                                 </div>
                                 <div>
                                     {data.form3.isAuthorAlive === "no" ? (
@@ -223,7 +222,7 @@ const LiteraryWork3 = (props) => {
                                     )}
                                 </div>
                             </div>
-                            <div className='action-btn'>
+                            <div className='action-btn3'>
                                 <button className='btn text-center' style={{ color: 'blue', fontSize: '25px', fontWeight: '400' }} onClick={handleBack}>
                                     <ArrowLeftIcon style={{ fontSize: '40' }} />
                                     Back

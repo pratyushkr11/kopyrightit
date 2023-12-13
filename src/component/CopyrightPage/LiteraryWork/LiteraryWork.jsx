@@ -136,45 +136,48 @@ const LiteraryWork = (props) => {
             <div style={{ paddingBottom: '100px', width: '60%', margin: 'auto' }}>
               <Dropdown id='option' options={options} onChange={handleChange} value={selectedOption} placeholder="Select an option" />
             </div>
-            <div className='form-fields'>
-              <label htmlFor='name'><b>Applicant's First Name: </b></label>
-              <input
-                placeholder="Enter Your First Name"
-                type="text"
-                id='name'
-                autoComplete="off"
-                required
-                value={data.form1.name}
-                onChange={handleChange}
-              ></input>
-            </div>
-            <div className='form-fields'>
-              <label htmlFor='name'><b>Applicant's Middle Name: </b></label>
-              <input
-                placeholder="Enter Your Middle Name"
-                type="text"
-                id='name1'
-                autoComplete="off"
-                value={data.form1.name1}
-                onChange={handleChange}
-              ></input>
-            </div>
-            <div className='form-fields'>
-              <label htmlFor='name'><b>Applicant's Last Name: </b></label>
-              <input
-                placeholder="Enter Your Last Name"
-                type="text"
-                id='name2'
-                autoComplete="off"
-                required
-                value={data.form1.name2}
-                onChange={handleChange}
-              ></input>
-            </div>
-            <div className='form-fields'>
-              <label htmlFor='mail'><b>Applicant's Email ID: </b></label>
-              <input
+            <div className='name-fields'>
+              <div className='form-fields'>
 
+                <label htmlFor='name'><b>First Name: </b></label>
+                <input
+                  placeholder="Enter Your First Name"
+                  type="text"
+                  id='name'
+                  autoComplete="off"
+                  required
+                  value={data.form1.name}
+                  onChange={handleChange}
+                ></input>
+              </div>
+              <div className='form-fields'>
+                <label htmlFor='name'><b>Middle Name: </b></label>
+                <input
+                  className='middle'
+                  placeholder="Enter Your Middle Name"
+                  type="text"
+                  id='name1'
+                  autoComplete="off"
+                  value={data.form1.name1}
+                  onChange={handleChange}
+                ></input>
+              </div>
+              <div className='form-fields'>
+                <label htmlFor='name'><b>Last Name: </b></label>
+                <input
+                  placeholder="Enter Your Last Name"
+                  type="text"
+                  id='name2'
+                  autoComplete="off"
+                  required
+                  value={data.form1.name2}
+                  onChange={handleChange}
+                ></input>
+              </div>
+            </div>
+            <div className='form-fields'>
+              <label htmlFor='mail'><b>Email ID: </b></label>
+              <input
                 placeholder="Enter Your email"
                 type="email"
                 id='mail'
@@ -211,9 +214,8 @@ const LiteraryWork = (props) => {
             <div className="drop_container">
               <div className="drop__fields">
                 <label htmlFor='country'><b>Country: </b></label>
-                <div style={{ width: '300px' }}>
+                <div>
                   <input
-                    style={{ height: '40px', width: '280px' }}
                     placeholder="Enter the country"
                     type="text"
                     id='country'
@@ -225,10 +227,10 @@ const LiteraryWork = (props) => {
                   ></input>
                 </div>
                 <label htmlFor='state'><b>State: </b></label>
-                <div style={{ width: '300px' }}>
+                <div>
                   <select
-                    style={{ height: '40px', width: '280px' }}
                     id='state'
+                    style={{ width: '200px' }}
                     required
                     value={data.form1.state}
                     onChange={handleChange}
@@ -242,11 +244,11 @@ const LiteraryWork = (props) => {
                   </select>
                 </div>
               </div>
-              <div className="drop__fields">
+              <div className="drop__fields2">
                 <label htmlFor='city'><b>City: </b></label>
-                <div style={{ width: '300px' }}>
+                <div>
                   <input
-                    style={{ height: '40px', width: '280px' }}
+                    className='city'
                     placeholder="Enter the city"
                     type="text"
                     id='city'
@@ -256,19 +258,21 @@ const LiteraryWork = (props) => {
                     onChange={handleChange}
                   ></input>
                 </div>
-                <label style={{ position: 'relative', right: '60px' }} htmlFor='zipcode'><b>ZIP: </b></label>
-                <input style={{ position: 'relative', right: '100px' }}
-                  placeholder="Enter Your ZIP"
-                  type="code"
-                  id='zip'
-                  autoComplete="off"
-                  required
-                  value={data.form1.zip}
-                  onChange={handleChange}
-                ></input>
+                <label htmlFor='zipcode'><b>ZIP: </b></label>
+                <div>
+                  <input
+                    placeholder="Enter Your ZIP"
+                    type="code"
+                    id='zip'
+                    autoComplete="off"
+                    required
+                    value={data.form1.zip}
+                    onChange={handleChange}
+                  ></input>
+                </div>
               </div>
             </div>
-            <div className='action-btn'>
+            <div className='action-btn nav-btn'>
               <Link to='/homepage' style={{ color: 'blue', fontSize: '25px', fontWeight: '400' }}>
                 <ArrowLeftIcon style={{ fontSize: '40' }} />
                 Back</Link>

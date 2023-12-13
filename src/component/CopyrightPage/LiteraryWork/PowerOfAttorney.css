@@ -1,0 +1,50 @@
+.poa-form-container {
+  width: 90%;
+  margin: auto;
+  background: white;
+  padding-bottom: 10px;
+  box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  height: max-content;
+}
+
+.form-checkbox {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.poa-image {
+  display: flex;
+  justify-content: center;
+}
+.poa-image img {
+  width: 45%;
+}
+
+.poa-cta-btn {
+  margin: 20px 0;
+  margin-left: 400px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .main__container {
+    background: #0575e6;
+    background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+    background: linear-gradient(to bottom, #0575e6, #021b79);
+  }
+
+  .hero-section {
+    padding: 0 20px 30px 150px;
+    color: white;
+  }
+  .poa-cta-btn {
+    margin-left: 250px;
+    font-size: 18px;
+    width: max-content;
+  }
+
+  .poa-cta-btn:hover {
+    background: #71afff;
+    color: black;
+  }
+}

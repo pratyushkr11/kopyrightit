@@ -6,6 +6,7 @@ import LiteraryWork from './LiteraryWork';
 import LiteraryWork2 from './LiteraryWork2';
 import LiteraryWork3 from './LiteraryWork3';
 import LiteraryWorkUpload from './LiteraryWorkUpload';
+import PowerOfAttorney from './PowerOfAttorney';
 
 const LiteraryForm = () => {
   const { selectedValue } = useParams(); // Get the selectedValue from URL parameter
@@ -73,6 +74,7 @@ const LiteraryForm = () => {
       {tab === 1 && <LiteraryWork2 tab={tab} setTab={setTab} data={data} setData={setData} answer={"no"} />}
       {tab === 2 && <LiteraryWork3 tab={tab} setTab={setTab} data={data} setData={setData} />}
       {tab === 3 && <LiteraryWorkUpload tab={tab} setTab={setTab} data={data} setData={setData} />}
+      {tab === 4 && <PowerOfAttorney tab={tab} setTab={setTab} data={data} setData={setData} />}
     </div>
   );
 }

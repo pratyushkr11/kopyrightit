@@ -6,7 +6,7 @@
 }
 
 .form-field {
-  width: 90%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
 }
@@ -14,4 +14,19 @@
 .save-btn {
   margin-bottom: 20px;
   align-items: center;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .form-label {
+    padding-top: 12px;
+    font-weight: 550;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .form-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }

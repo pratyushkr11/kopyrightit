@@ -84,19 +84,19 @@ const LiteraryWorkUpload = (props) => {
         }
     };
 
-    const handleSave = async (e) => {
-        e.preventDefault();
-        setIsOpen(true);
+    // const handleSave = async (e) => {
+    //     e.preventDefault();
+    //     setIsOpen(true);
 
-        setData({
-            ...data,
-            keyValue: {
-                ...data.keyValue,
-                fileKey1: fileKey,
-                imageKey1: imageKey
-            }
-        });
-    };
+    //     setData({
+    //         ...data,
+    //         keyValue: {
+    //             ...data.keyValue,
+    //             fileKey1: fileKey,
+    //             imageKey1: imageKey
+    //         }
+    //     });
+    // };
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -107,12 +107,17 @@ const LiteraryWorkUpload = (props) => {
         setTab(tab - 1);
     };
 
+    const handleNext = (e) => {
+        e.preventDefault();
+        setTab(tab + 1);
+    };
+
     return (
         <>
             <FormPreviewModal isOpen={isOpen} setIsOpen={setIsOpen} contentLabel={'Preview'} data={data} />
             <div className='main__container'>
                 <Navbar />
-                <div className='upload__container' style={{ marginTop: '50px' }}>
+                <div className='upload__container'>
                     <h2><u>Upload Supporting Files</u></h2>
                     <div className='upload'>
                         <div className='doc-upload'>
@@ -139,10 +144,9 @@ const LiteraryWorkUpload = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className='action-btn-upload' style={{ padding: '0' }}>
+                    <div className='action-btn-upload'>
                         <button className='btn btn-back' style={{ color: 'blue', fontSize: '25px', fontWeight: '400' }} onClick={handleBack}><ArrowLeftIcon style={{ fontSize: '40' }} />Back</button>
-                        <button className='btn btn-lg cta-btn' onClick={handleSave}>Confirm and Save Details</button>
-
+                        <button className='btn btn-front' style={{ color: 'blue', fontSize: '25px', fontWeight: '400' }} onClick={handleNext}>Next<ArrowRightIcon style={{ fontSize: '40' }} /></button>
                     </div>
                 </div>
                 <Footer />

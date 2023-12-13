@@ -44,18 +44,13 @@
   padding: 10px 0;
 }
 
-.app__question {
-  display: flex;
-  justify-content: flex-start;
+.app__question label {
   padding: 10px 0;
+  margin-right: 300px;
 }
 
-.app__option {
-  margin-left: 650px;
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-  padding: 10px 0;
+.app__question input {
+  margin-left: 100px;
 }
 
 .yes__container div,
@@ -63,4 +58,48 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+}
+
+.action-btn3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .main__container {
+    background: #0575e6;
+    background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+    background: linear-gradient(to bottom, #0575e6, #021b79);
+  }
+
+  .hero-section {
+    padding: 0 20px 30px 150px;
+    color: white;
+  }
+
+  .app__question label {
+    padding: 10px 0;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+
+  .app__question input {
+    margin-left: 30px;
+    padding-top: 5px;
+  }
+
+  .question__container label {
+    font-size: 18px;
+    padding-top: 5px;
+  }
+
+  .question__container input {
+    height: 40px;
+  }
+
+  .yes__container label,
+  .no__container label {
+    font-size: 18px;
+  }
 }

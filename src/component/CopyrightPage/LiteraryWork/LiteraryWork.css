@@ -41,37 +41,61 @@
 
 .form-fields input {
   width: 500px;
+  height: 50px;
   border-radius: 10px;
   border-width: 1px;
   padding-left: 20px;
+  margin-right: 120px;
+}
+
+.name-fields {
+  display: flex;
+  width: 35%;
+  justify-content: flex-start;
+  height: 100px;
+}
+
+.name-fields input {
+  width: 240px;
+}
+
+.form-fields > .middle {
+  position: relative;
+  right: -20px;
+}
+.name-fields label {
+  position: absolute;
+  left: 80px;
 }
 
 .form-fields {
-  width: 85%;
+  width: 90%;
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin: 40px 0px;
+  margin: 40px 0;
 }
 
 .form-fields label {
-  font-weight: 500;
-  font-size: 25px;
+  font-size: 18px;
+  padding-top: 10px;
 }
 
 .form-fields {
   padding-left: 200px;
 }
 
-.drop__fields {
+.drop__fields,
+.drop__fields2 {
   width: 90%;
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
 }
 
-.drop__fields input {
-  width: 200px;
+.drop__fields input,
+.drop__fields2 input {
+  height: 50px;
   padding-left: 20px;
   border-radius: 10px;
   border: 1px solid;
@@ -81,17 +105,18 @@
   margin-left: 200px;
 }
 
-.drop_container input {
-  width: 200px;
-}
-
 .drop_container label {
   font-weight: 500;
-  font-size: 25px;
+  font-size: 18px;
+  padding-top: 10px;
 }
 
+.city {
+  margin-left: 30px;
+}
 .drop_container Select {
   width: 400px;
+  height: 50px;
 }
 
 .action-btn {
@@ -100,4 +125,135 @@
   padding: 40px 0;
   margin: auto;
   width: 90%;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .main__container {
+    background: #0575e6;
+    background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+    background: linear-gradient(to bottom, #0575e6, #021b79);
+  }
+
+  .hero-section {
+    padding: 0 20px 30px 150px;
+    color: white;
+  }
+
+  .hero-section p {
+    width: 500px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 30px;
+  }
+
+  .hero-section img {
+    position: absolute;
+    right: 120px;
+    top: 70px;
+    width: 200px;
+  }
+
+  .form-container {
+    width: 90%;
+    margin: auto;
+    background: white;
+    padding-bottom: 10px;
+    box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
+  .form-head {
+    padding: 5px 0;
+  }
+
+  .form-head h2 {
+    padding-top: 25px;
+  }
+
+  .form-fields input {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding-left: 20px;
+  }
+
+  .name-fields {
+    display: flex;
+    justify-content: flex-start;
+    height: 100px;
+    margin-left: 40px;
+  }
+
+  .name-fields input {
+    width: 150px;
+    padding-left: 2px;
+    font-size: 13px;
+  }
+
+  .name-fields label {
+    position: absolute;
+    left: 5px;
+  }
+
+  .form-fields {
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+  }
+
+  .form-fields label {
+    font-size: 15px;
+    padding-top: 10px;
+  }
+
+  .form-fields {
+    padding-left: 100px;
+  }
+
+  .drop__fields,
+  .drop__fields2 {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  .drop__fields input,
+  .drop__fields select,
+  .drop__fields2 input {
+    border-radius: 10px;
+    border: 1px solid;
+    padding-left: 10px;
+    height: 40px;
+    width: 200px;
+  }
+
+  .city {
+    position: relative;
+    left: 10px;
+  }
+  .drop_container {
+    margin-left: 100px;
+  }
+
+  .drop_container label {
+    font-weight: 500;
+    font-size: 15px;
+    padding-top: 10px;
+  }
+
+  .action-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    margin: auto;
+    width: 90%;
+  }
+
+  .nav-btn {
+    color: blue;
+    font-size: 10px;
+  }
 }

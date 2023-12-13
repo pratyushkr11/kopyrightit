@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import Box from '@mui/material/Box';
+import { useState } from 'react';
 import SideAppbar from '../Dashboard/SideAppbar';
 import TextField from '@mui/material/TextField';
-import { Typography } from '@mui/material';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 import './Help.css';
 
@@ -16,6 +15,11 @@ const Help = () => {
     email: '',
     issue: '',
   });
+
+  const options = [
+    'Issue-1', 'Issue-2', 'Issue-3'
+  ];
+  const [selectedOption, setSelectedOption] = useState(options[0]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -65,59 +69,60 @@ const Help = () => {
       <div className='app__sidebar'>
         <SideAppbar />
       </div>
-      <div style={{ margin: '100px 0 0 300px' }}>
-        <Typography variant="h4" sx={{ fontWeight: '600', textAlign: 'center', color: '#022D69' }}>Feel free to ask anything regarding copyright</Typography>
+      <div className='help'>
+        <h1>Feel free to ask anything regarding copyright</h1>
+        <div className='help-container'>
+          <h4>We are happy to help you!</h4>
+          <form onSubmit={handleSubmit}>
+            <div className='app__help'>
+              <label>Full Name: </label>
+              <TextField
+                required
+                size="small"
+                id="fullName"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleInputChange}
+                placeholder='Enter Your Full Name'
+              />
+            </div>
+            <div className='app__help'>
+              <label style={{ marginRight: '15px' }}>Email ID: </label>
+              <TextField
+                required
+                size="small"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder='Enter your email'
+              />
+            </div>
+            <div className='app__help'>
+              <label style={{ marginRight: '15px' }}>Select Your Issue: </label>
+              <div className='issue-dropdown'>
+                <Dropdown id='option' options={options} value={selectedOption} placeholder="Select an option" />
+                <Dropdown id='option' options={options} value={selectedOption} placeholder="Select an option" />
+              </div>
+            </div>
+            <div className='app__help'>
+              <label>Describe your issue: </label>
+              <textarea
+                rows="6"
+                cols="40"
+                id="issue"
+                name="issue"
+                value={formData.issue}
+                onChange={handleInputChange}
+                placeholder='Write your query here (optional)'
+              />
+            </div>
+            <div className='text-center pt-4'>
+              <button className="btn btn-lg send-btn" type="submit">Send</button>
+            </div>
+          </form>
+        </div>
       </div>
-      <Box
-        sx={{
-          margin: '20px 30px 20px 420px',
-          width: 850,
-          height: 500,
-          border: '1px solid rgba(0, 0, 0, 0.5)',
-          borderRadius: '10px'
-        }}
-      >
-        <Typography variant='h4' pt={2} sx={{ textAlign: 'center' }}>We are happy to help you!</Typography>
-        <form onSubmit={handleSubmit}>
-          <div className='app__help'>
-            <label className='label-field'>Full Name: </label>
-            <TextField
-              required
-              size="small"
-              id="fullName"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div className='app__help'>
-            <label className='label-field' style={{ marginRight: '15px' }}>Email ID: </label>
-            <TextField
-              required
-              size="small"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div className='app__help'>
-            <label className='label-field'>Describe your issue: </label>
-            <textarea
-              rows="6"
-              cols="60"
-              id="issue"
-              name="issue"
-              value={formData.issue}
-              onChange={handleInputChange}
-              placeholder='Write your query here'
-            />
-          </div>
-          <div className='text-center pt-4'>
-            <button className="btn btn-lg send-btn" type="submit">Send</button>
-          </div>
-        </form>
-      </Box>
     </div>
   );
 };

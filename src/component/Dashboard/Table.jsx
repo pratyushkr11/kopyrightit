@@ -12,8 +12,6 @@ import axios from 'axios';
 import CircularProgress from '@mui/material/CircularProgress';
 import FormModal from './FormModal'
 
-
-
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
@@ -93,7 +91,7 @@ export default function CustomizedTables() {
           // Display loading indicator while data is being fetched
           <CircularProgress />
         ) : (
-          <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <Table aria-label="customized table">
             <TableHead>
               <TableRow>
                 <StyledTableCell>Name of application</StyledTableCell>

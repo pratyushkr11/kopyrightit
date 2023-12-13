@@ -38,14 +38,14 @@ const LiteraryWork2 = (props) => {
         <>
             <div className='main__container'>
                 <Navbar />
-                <div className='form-container2' style={{ marginTop: '50px' }}>
-                    <h2 className='text-center'><u>Few More Questions About Your Work</u></h2>
+                <div className='form-container2'>
+                    <h2><u>Few More Questions About Your Work</u></h2>
                     <div className='formq-field'>
                         <form>
                             <div className='radio-btn'>
                                 <label htmlFor='text'>Is the work to be registered an original work?</label>
                                 <div>
-                                    <p style={{ fontWeight: '500', fontSize: '18px' }}>
+                                    <p>
                                         <input
                                             id='isOriginalWork'
                                             checked={data.form2.isOriginalWork === "yes"}
@@ -54,7 +54,7 @@ const LiteraryWork2 = (props) => {
                                             onChange={handleChange}
                                         />Yes
                                     </p>
-                                    <p style={{ fontWeight: '500', fontSize: '18px' }}>
+                                    <p>
                                         <input
                                             id='isOriginalWork'
                                             checked={data.form2.isOriginalWork === "no"}
@@ -67,7 +67,7 @@ const LiteraryWork2 = (props) => {
                             </div>
                             <div>
                                 {data.form2.isOriginalWork === "no" ? (
-                                    <div className='conditional-conatiner text-center'>
+                                    <div className='conditional-conatiner'>
                                         <div>
                                             <label htmlFor='workTranslation'>Translation of the work in public domain:</label>
                                             <input

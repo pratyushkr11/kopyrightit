@@ -1,12 +1,67 @@
-.label-field {
+.app__help label {
   padding-top: 5px;
   font-weight: 550;
   font-size: 20px;
   text-align: left;
 }
 
+.help {
+  margin-top: 120px;
+}
+
+.help h1 {
+  margin-left: 500px;
+  padding-bottom: 20px;
+  font-weight: 600;
+  color: #022d69;
+}
+
+.help h4 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.issue-dropdown {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.help-container {
+  margin: 20px 30px 40px 500px;
+  width: 820px;
+  height: max-content;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
 .app__help {
   padding: 30px 0 0 40px;
   display: flex;
   gap: 40px;
+}
+
+.app__help textarea {
+  padding: 10px;
+}
+
+.send-btn {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .help h1 {
+    margin-left: 330px;
+    padding-bottom: 20px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #022d69;
+  }
+
+  .help-container {
+    margin: 20px 30px 40px 300px;
+    width: 700px;
+    height: max-content;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
 }

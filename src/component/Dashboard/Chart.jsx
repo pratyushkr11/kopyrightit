@@ -1,5 +1,4 @@
-import Box from '@mui/material/Box';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const allMonths = [
   "January", "February", "March", "April", "May", "June",
@@ -13,22 +12,16 @@ const Chart = ({ data }) => {
   }));
 
   return (
-    <div style={{ paddingTop: '20px' }}>
-      <Box sx={{ width: '100%', color: '#fff' }}>
-        <BarChart
-          width={600}
-          height={300}
-          data={chartData}
-          margin={{ top: 20, right: 50, bottom: 5 }}
-        >
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="applications" fill="#8884d8" />
-        </BarChart>
-      </Box>
-    </div>
+    <ResponsiveContainer>
+      <BarChart
+        data={chartData}>
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="applications" fill="#8884d8" />
+      </BarChart>
+    </ResponsiveContainer>
   );
 };
 

@@ -10,8 +10,9 @@
 
 .form-container2 {
   width: 90%;
-  height: 700px;
+  height: max-content;
   margin: auto;
+  margin-top: 50px !important;
   background: white;
 
   box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.25);
@@ -72,4 +73,32 @@
 .btn-lg:hover {
   background: #71afff;
   color: black;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .main__container {
+    background: #0575e6;
+    background: -webkit-linear-gradient(to bottom, #0575e6, #021b79);
+    background: linear-gradient(to bottom, #0575e6, #021b79);
+  }
+
+  .hero-section {
+    padding: 0 20px 30px 150px;
+    color: white;
+    height: max-content;
+  }
+
+  .radio-btn label {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .conditional-conatiner label {
+    font-size: 15px;
+  }
+
+  .conditional-conatiner input {
+    height: 30px;
+    width: 320px;
+    border-radius: 5px;
+  }
 }
