@@ -28,26 +28,112 @@ const LiteraryWorkUpload = (props) => {
         setSelectedFile(e.target.files[0]);
     };
 
+    // const validateFile = (view) => {
+    //     // For simplicity, assume the file is valid if it's not empty
+    //     return view.length > 0;
+    // };
+    // const handleFileChange = (e) => {
+    //     const file = e.target.files[0];
+    //     if (file) {
+    //         const reader = new FileReader();
+    //         reader.onload = function (event) {
+    //             const buffer = event.target.result;
+    //             const view = new Uint8Array(buffer);
+    
+    //             if (!validateFile(view)) {
+    //                 // Handle corrupted or invalid file
+    //                 alert('The file appears to be corrupted or invalid.');
+    //                 return;
+    //             }
+    
+    //             setSelectedFile(file);
+    //         };
+    //         // setSelectedFile(file);
+    
+    //         reader.readAsArrayBuffer(file);
+    //     }
+    // };
+    
+    
+    
+
+    
+
     const handleImageChange = (e) => {
         setImage(e.target.files[0]);
     };
 
     const handleFileUpload = async () => {
         try {
-            const urlResponse = await axios.get("https://kopyrightit-backend-zdfw.onrender.com/getUploadUrl");
+            const urlResponse = await axios.get("http://localhost:3001/getUploadUrl");
             const { url, key } = urlResponse.data;
-
+    
             if (selectedFile) {
+                const fileSize = selectedFile.size; // Get file size in bytes
+    
+                // Set maximum file size based on file type
+                let maxSize;
+                console.log(selectedFile.type)
+                switch (selectedFile.type) {
+                    case 'application/pdf':
+                    case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
+                        // Set max size for PDF and DOCX files to standard size or adjust as needed
+                        maxSize = 50 * 1024 * 1024; // 50 MB
+                        break;
+                    case 'image/jpeg':
+                    case 'image/png':
+                        // Set max size for image files to 4MB
+                        maxSize = 4 * 1024 * 1024; // 4 MB
+                        break;
+                    case 'audio/mp3':
+                        // Set max size for audio files to 1GB or adjust as needed
+                        maxSize = 1024 * 1024 * 1024; // 1 GB
+                        break;
+                    case 'video/mp4':
+                        maxSize = 4 * 1024 * 1024 * 1024; // 4 GB
+                        break;
+                    case 'video/x-matroska':
+                        maxSize = 4 * 1024 * 1024 * 1024; // 4 GB
+                        break;
+                    case 'video/webm':
+                        maxSize = 4 * 1024 * 1024 * 1024; // 4 GB
+                        break;
+                    case 'video/wmv':
+                        // Set max size for video files to 4GB or adjust as needed
+                        maxSize = 4 * 1024 * 1024 * 1024; // 4 GB
+                        break;
+                    default:
+                        maxSize = 0; // Set default size limit for other file types
+                }
+    
+                const allowedExtensions = ['pdf', 'docx', 'jpg', 'jpeg', 'png', 'mp3', 'mp4', 'avi', 'wav', 'ogg', 'flac', 'wmv', 'mov', 'webm', 'mkv'];
+                const fileExtension = selectedFile.name.split('.').pop().toLowerCase();
+    
+                if (!allowedExtensions.includes(fileExtension)) {
+                    // Handle unsupported file extension
+                    setDocErrorMessage('Unsupported file format. Please select a valid file.');
+                    setDocSuccessMessage('');
+                    return;
+                }
+    
+                if (fileSize > maxSize) {
+                    // Handle file size exceeding limit
+                    setDocErrorMessage(`File size should be less than ${maxSize / (1024 * 1024)} MB.`);
+                    setDocSuccessMessage('');
+                    return;
+                }
+    
                 const uploadResponse = await axios.put(url, selectedFile, {
                     headers: {
                         "Content-Type": selectedFile.type,
                     },
                 });
-
+    
                 setFileKey(key); // Store the key
                 setDocSuccessMessage('File uploaded successfully');
                 setDocErrorMessage('');
             } else {
+                // Handle no file selected
                 setDocErrorMessage('No file selected for upload.');
                 setDocSuccessMessage('');
             }
@@ -57,13 +143,24 @@ const LiteraryWorkUpload = (props) => {
             setDocSuccessMessage('');
         }
     };
+    
+    
+    
 
     const handleImageUpload = async () => {
         try {
-            const urlResponse = await axios.get("https://kopyrightit-backend-zdfw.onrender.com/getUploadUrl");
+            const urlResponse = await axios.get("http://localhost:3001/getUploadUrl");
             const { url, key } = urlResponse.data;
 
             if (image) {
+                const fileSize = image.size; // Get file size in bytes
+                const fileSizeInKB = fileSize / 1024; // Convert to KB
+
+                if (fileSizeInKB > 100) {
+                    setImageErrorMessage('Image size should be less than 100KB.');
+                    setImageSuccessMessage('');
+                    return;
+                }
                 const uploadResponse = await axios.put(url, image, {
                     headers: {
                         "Content-Type": image.type,

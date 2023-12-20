@@ -30,7 +30,7 @@ const Help = () => {
     e.preventDefault();
 
     // Send the form data to your server for email processing
-    axios.post('https://kopyrightit-backend-zdfw.onrender.com/api/sendEmail', formData)
+    axios.post('http://localhost:3001/api/sendEmail', formData)
       .then((response) => {
         // Handle success (e.g., show a success message)
         console.log('Email sent successfully:', response.data);
